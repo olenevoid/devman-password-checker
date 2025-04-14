@@ -15,8 +15,7 @@ def has_upper_letters(password: str) -> bool:
 
 
 def has_symbols(password: str) -> bool:
-    symbols = ['%', '#', '!', '_', '-']
-    return any(password.__contains__(symbol) for symbol in symbols)
+    return not password.isalnum()
 
 
 def get_pass_rating(password: str) -> int:
